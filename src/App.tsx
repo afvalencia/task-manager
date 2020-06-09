@@ -57,10 +57,10 @@ function App(): JSX.Element {
                     {t.name}
                 </h2>
                 <div>
-                  <button className="btn btn-secondary" onClick={() => toggleDoneTask(i)}>
+                  <button className={t.done ? "btn btn-danger" : "btn btn-success"} onClick={() => toggleDoneTask(i)}>
                     {t.done ? '✗' : '✓'}
                   </button>
-                  <button className="btn btn-danger ml-2" onClick={() => deleteTask(i)}>🗑</button>
+                  <button className="btn btn-warning ml-2" onClick={() => deleteTask(i)}>🗑</button>
                 </div>                  
               </div>
             ))
